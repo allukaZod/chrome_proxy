@@ -29,8 +29,9 @@ func TestResult_Bytes(t *testing.T) {
 				Title:    "this is a test result",
 				Location: "https://example.com",
 			},
-			want: []byte("{\"code\":200,\"message\":\"success\",\"url\":\"https://example.com\",\"data\":\"sample\"," +
-				"\"title\":\"this is a test result\",\"location\":\"https://example.com\"}"),
+			want: []byte("{\"code\":200,\"message\":\"success\",\"url\":\"https://example.com\"," +
+				"\"data\":\"sample\",\"title\":\"this is a test result\",\"location\":\"https://example.com\"" +
+				",\"script_success\":false}"),
 		},
 	}
 	for _, tt := range tests {

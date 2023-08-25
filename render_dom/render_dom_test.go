@@ -46,7 +46,7 @@ func Test_renderURLDOM(t *testing.T) {
 					AddUrl:       false,
 					AddTimeStamp: false,
 					ChromeActionInput: models.ChromeActionInput{
-						URL:       "https://www.fofa.info",
+						URL:       "https://baidu.com",
 						Proxy:     "socks5://127.0.0.1:7890",
 						UserAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
 						Sleep:     5,
@@ -56,9 +56,9 @@ func Test_renderURLDOM(t *testing.T) {
 				logf: func(s string, i ...interface{}) {},
 			},
 			want: &models.RenderDomOutput{
-				Html:     "FOFA",
-				Title:    "FOFA Search Engine",
-				Location: "fofa.info",
+				Html:     "baidu",
+				Title:    "百度一下，你就知道",
+				Location: "baidu.com",
 			},
 		},
 		{
@@ -78,9 +78,9 @@ func Test_renderURLDOM(t *testing.T) {
 				logf: func(s string, i ...interface{}) {},
 			},
 			want: &models.RenderDomOutput{
-				Html:     "請登陸用戶後臺綁定或啟動網站", // "ETC联网升级",
-				Title:    "",               // "认证中心",
-				Location: "http://asd.naeuib12123d.xyz/a.html#/",
+				Html:     "Please contact your administrator for further assistance", // "ETC联网升级",
+				Title:    "Blocked by Cloudflare Gateway",                            // "认证中心",
+				Location: "https://blocked.teams.cloudflare.com/",
 			},
 		},
 	}

@@ -24,6 +24,11 @@ type ChromeActionInput struct {
 	Timeout   int    `json:"timeout"`
 }
 
+// ChromeActionOutput chrome 渲染输出字段
+type ChromeActionOutput struct {
+	OutHtml string `json:"out_html"`
+}
+
 // ChromeParam Chrome 渲染输入字段
 type ChromeParam struct {
 	AddUrl       bool `json:"add_url"` // 在截图中展示url地址

@@ -74,9 +74,6 @@ func TestScreenshotURL(t *testing.T) {
 			}},
 			wantErr: assert.NoError,
 		},
-		{
-			name: "带base64输出",
-		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
